@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx/11.0.1"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="application.controllers.CreateClassController"
+      spacing="10" style="-fx-padding: 10;">
+
+    <Label text="Dodawanie nowej klasy" style="-fx-font-size: 16; -fx-font-weight: bold;"/>
+
+    <TextField fx:id="classNameField" promptText="Nazwa klasy"/>
+
+    <Button text="Dodaj klasę" onAction="#createClass"/>
+
+    <Label fx:id="statusLabel" style="-fx-text-fill: #ff0000;"/>
+
+</VBox>

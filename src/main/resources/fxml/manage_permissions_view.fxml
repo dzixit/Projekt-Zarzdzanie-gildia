@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<VBox xmlns="http://javafx.com/javafx/11.0.1"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="application.controllers.PermissionsController"
+      spacing="10" style="-fx-padding: 10;">
+
+    <Label text="Zmiana uprawnień graczy" style="-fx-font-weight: bold;"/>
+
+    <TableView fx:id="playersTableView" VBox.vgrow="ALWAYS">
+        <columns>
+            <TableColumn text="Gracz">
+                <cellValueFactory>
+                    <PropertyValueFactory property="username"/>
+                </cellValueFactory>
+            </TableColumn>
+
+            <TableColumn text="Gildia">
+                <cellValueFactory>
+                    <PropertyValueFactory property="guildName"/>
+                </cellValueFactory>
+            </TableColumn>
+
+            <TableColumn text="Ranga">
+                <cellValueFactory>
+                    <PropertyValueFactory property="rankName"/>
+                </cellValueFactory>
+            </TableColumn>
+        </columns>
+    </TableView>
+
+    <HBox spacing="10">
+        <ComboBox fx:id="ranksComboBox" promptText="Wybierz nową rangę"/>
+        <Button text="Zaktualizuj rangę" onAction="#updateRank"/>
+        <Button text="Odśwież" onAction="#handleRefresh" style="-fx-background-color: #2196F3; -fx-text-fill: white;"/>
+    </HBox>
+
+    <Label fx:id="statusLabel" style="-fx-text-fill: #ff0000;"/>
+</VBox>

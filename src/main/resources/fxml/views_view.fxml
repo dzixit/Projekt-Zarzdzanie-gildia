@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<SplitPane xmlns="http://javafx.com/javafx/11.0.1"
+           xmlns:fx="http://javafx.com/fxml/1"
+           fx:controller="application.controllers.ViewsController"
+           dividerPositions="0.5">
+
+    <VBox>
+        <Label text="Klasy i umiejętności" style="-fx-font-weight: bold; -fx-padding: 10;"/>
+        <TableView fx:id="classAbilitiesTable" VBox.vgrow="ALWAYS"/>
+    </VBox>
+
+    <VBox>
+        <Label text="Statystyki i osiągnięcia" style="-fx-font-weight: bold; -fx-padding: 10;"/>
+        <TableView fx:id="playerStatsTable" VBox.vgrow="ALWAYS"/>
+    </VBox>
+</SplitPane>

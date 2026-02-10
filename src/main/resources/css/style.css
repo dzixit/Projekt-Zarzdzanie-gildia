@@ -1,0 +1,118 @@
+/* Ścieżki do zasobów powinny być względne od folderu resources */
+.root {
+    -fx-font-family: "Arial";
+    -fx-base: #3f51b5;
+    -fx-background: #f5f5f5;
+}
+
+.chart {
+    -fx-padding: 10px;
+    -fx-background-color: white;
+    -fx-legend-visible: true;
+}
+
+.chart-title {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+}
+
+.axis-label {
+    -fx-font-size: 12px;
+}
+
+.list-view {
+    -fx-background-insets: 0;
+    -fx-padding: 0;
+}
+
+.list-cell {
+    -fx-padding: 5 10;
+    -fx-background-color: white;
+    -fx-border-color: #e0e0e0;
+    -fx-border-width: 0 0 1 0;
+}
+
+.list-cell:filled:selected {
+    -fx-background-color: #3f51b5;
+    -fx-text-fill: white;
+}
+
+.tab-pane {
+    -fx-background-color: white;
+}
+
+.tab {
+    -fx-background-color: #e0e0e0;
+    -fx-padding: 5 15;
+}
+
+.tab:selected {
+    -fx-background-color: #3f51b5;
+    -fx-text-fill: white;
+}
+
+.text-field, .combo-box {
+    -fx-pref-width: 200px;
+}
+
+.button {
+    -fx-pref-width: 200px;
+    -fx-background-color: #4CAF50;
+    -fx-text-fill: white;
+}
+
+.button:hover {
+    -fx-background-color: #45a049;
+}
+
+.table-view {
+    -fx-pref-height: 600px;
+}
+
+.table-column {
+    -fx-alignment: CENTER;
+}
+
+.table-row-cell:odd {
+    -fx-background-color: #f9f9f9;
+}
+
+.table-row-cell:selected {
+    -fx-background-color: #3f51b5;
+    -fx-text-fill: white;
+}
+.chart-bar {
+    -fx-bar-fill: #3f51b5;
+    -fx-bar-width: 30px;
+}
+
+.axis {
+    -fx-tick-label-font-size: 12px;
+}
+
+.chart-legend-item {
+    -fx-font-size: 14px;
+}
+
+.default-color0.chart-bar {
+    -fx-bar-fill: #3f51b5;
+}
+
+.default-color1.chart-bar {
+    -fx-bar-fill: #ff5722;
+}
+.split-pane {
+    -fx-background-color: white;
+}
+
+.split-pane:horizontal > .split-pane-divider {
+    -fx-border-color: transparent #e0e0e0 transparent #e0e0e0;
+    -fx-background-color: transparent;
+}
+.combo-box {
+    -fx-pref-width: 250px;
+}
+
+.table-view {
+    -fx-table-cell-border-color: transparent;
+}

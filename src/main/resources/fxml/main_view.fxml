@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/11.0.1"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="application.controllers.MainController">
+
+    <left>
+        <VBox spacing="10" style="-fx-padding: 10;">
+
+            <Separator/>
+
+            <Label text="Dodaj nowego gracza" style="-fx-font-weight: bold; -fx-font-size: 14;"/>
+            <TextField fx:id="playerNameField" promptText="Nazwa gracza"/>
+            <ComboBox fx:id="classComboBox" promptText="Wybierz klasę"/>
+            <ComboBox fx:id="guildComboBox" promptText="Wybierz gildię"/>
+            <Button fx:id="addPlayerButton" text="Dodaj gracza"/>
+            <Label fx:id="statusLabel" style="-fx-text-fill: #ff0000;"/>
+            <Label text="Lista gildii" style="-fx-font-weight: bold; -fx-font-size: 14;"/>
+            <Button text="Odśwież dane" onAction="#refreshAllData" style="-fx-background-color: #2196F3; -fx-text-fill: white;"/>
+            <ListView fx:id="guildListView" VBox.vgrow="ALWAYS"/>
+        </VBox>
+    </left>
+
+    <center>
+        <TabPane>
+            <Tab text="Statystyki">
+                <VBox spacing="10" style="-fx-padding: 10;">
+                    <BarChart fx:id="membersChart" title="Liczba członków gildii" VBox.vgrow="ALWAYS">
+                        <xAxis>
+                            <CategoryAxis label="Gildie"/>
+                        </xAxis>
+                        <yAxis>
+                            <NumberAxis label="Liczba członków"/>
+                        </yAxis>
+                    </BarChart>
+                    <PieChart fx:id="fundsPieChart" title="Fundusze gildii" VBox.vgrow="ALWAYS"/>
+                </VBox>
+            </Tab>
+
+            <Tab text="Aktywność graczy">
+                <TableView fx:id="activityTable" VBox.vgrow="ALWAYS"/>
+            </Tab>
+
+            <Tab text="Transakcje finansowe">
+                <TableView fx:id="transactionTable" VBox.vgrow="ALWAYS"/>
+            </Tab>
+
+            <Tab text="Usuwanie Graczy">
+                <fx:include source="players_view.fxml"/>
+            </Tab>
+
+            <Tab text="Nowa gildia">
+                <fx:include source="create_guild_view.fxml"/>
+            </Tab>
+
+            <Tab text="Nowa klasa">
+                <fx:include source="create_class_view.fxml"/>
+            </Tab>
+
+            <Tab text="Widoki">
+                <fx:include source="views_view.fxml"/>
+            </Tab>
+
+            <Tab text="Zarządzaj uprawnieniami">
+                <fx:include source="manage_permissions_view.fxml"/>
+            </Tab>
+        </TabPane>
+    </center>
+</BorderPane>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx/11.0.1"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="application.controllers.PlayersController"
+      spacing="10" style="-fx-padding: 10;">
+
+    <TableView fx:id="playersTableView" VBox.vgrow="ALWAYS">
+        <!-- Kolumny będą dodane programowo w kontrolerze -->
+    </TableView>
+
+    <HBox spacing="10">
+        <Button fx:id="deletePlayerButton" text="Usuń wybranego gracza"/>
+        <Button text="Odśwież" onAction="#handleRefreshButton" style="-fx-background-color: #2196F3; -fx-text-fill: white;"/>
+    </HBox>
+
+    <PieChart fx:id="classDistributionChart" title="Rozkład klas" VBox.vgrow="ALWAYS"/>
+
+</VBox>
